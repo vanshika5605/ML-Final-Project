@@ -57,15 +57,8 @@ def test_depths(X, y, feature_types, target_column):
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     plt.show()
 
-# Function to test different ntree values for a dataset
-def run_classifier(filename, feature_types, max_depth):
-    # Load data
-    df = pd.read_csv(filename)
-    target_column = "label"
 
-    X = df.drop(columns=target_column).values
-    y = df[target_column].values
-
+def run_classifier(X, y, target_column, feature_types, max_depth):
     # Define ntree values and fixed max depth
     ntree_values = [1, 5, 10, 20, 30, 40, 50]
 
@@ -77,50 +70,63 @@ def run_classifier(filename, feature_types, max_depth):
 
     # Extract metric lists
     ntree_list = [res['ntree'] for res in results]
+    accuracy_list = [res['Accuracy'] for res in results]
+    f1_list = [res['F1'] for res in results]
+
+    # Print Accuracy and F1 for each ntree
+    print("ntree\tAccuracy\tF1-score")
+    for res in results:
+        print(f"{res['ntree']}\t{res['Accuracy']:.4f}\t\t{res['F1']:.4f}")
+
+    # Collect metrics for plotting
     metrics = {
-        'Accuracy': [res['Accuracy'] for res in results],
+        'Accuracy': accuracy_list,
         'Precision': [res['Precision'] for res in results],
         'Recall': [res['Recall'] for res in results],
-        'F1-score': [res['F1'] for res in results]
+        'F1-score': f1_list
     }
 
-    # Plot each metric separately
-    for metric_name, metric_values in metrics.items():
-        plt.figure(figsize=(8, 5))
-        plt.plot(ntree_list, metric_values, marker='o')
-        plt.title(f'{metric_name} vs Number of Trees(ntree)')
-        plt.xlabel('ntree')
-        plt.ylabel(metric_name)
-        plt.grid(True)
-        plt.tight_layout()
-        plt.show()
+    # Plot all metrics in a single figure with subplots
+    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+    axes = axes.ravel()  # Flatten 2D array of axes
+
+    for i, (metric_name, metric_values) in enumerate(metrics.items()):
+        axes[i].plot(ntree_list, metric_values, marker='o')
+        axes[i].set_title(f'{metric_name} vs Number of Trees (ntree)')
+        axes[i].set_xlabel('ntree')
+        axes[i].set_ylabel(metric_name)
+        axes[i].grid(True)
+
+    plt.tight_layout()
+    plt.show()
 
 # To run the classifier for different datasets
 
-# run_classifier("data/wdbc.csv", ['numerical'] * 30, 9)
+# X, y = load_dataset()
+# run_classifier(X, y, "label", ['numerical'] * 64, 13)
 
-# feature_types = ['categorical','categorical','categorical','categorical','categorical','numerical','numerical','numerical','numerical','categorical','categorical']
-# run_classifier("data/loan.csv", feature_types, 5)
+# X, y = load_from_csv("../data/parkinsons.csv", "Diagnosis")
+# run_classifier(X, y, "Diagnosis", ['numerical'] * 22, 13)
 
-# run_classifier("data/raisin.csv", ['numerical'] * 7, 7)
+X, y = load_from_csv("../data/rice.csv", "label")
+run_classifier(X, y, "label", ['numerical'] * 7, 7)
 
-# feature_types = ['categorical','categorical','numerical','numerical','numerical','numerical']
-# run_classifier("data/titanic.csv", feature_types, 7)
+# feature_types = ['categorical','numerical','numerical','categorical','categorical','categorical','categorical','numerical','categorical','categorical','categorical','categorical','categorical','numerical','numerical']
+# X, y = load_from_csv("../data/credit_approval.csv", "label")
+# run_classifier(X, y, "label", feature_types, 15)
+
 
 # To test the classifier for different maximal_depths
 
 # X, y = load_dataset()
-
 # test_depths(X, y, ['numerical'] * 64, "label")
 
 # X, y = load_from_csv("../data/parkinsons.csv", "Diagnosis")
-
 # test_depths(X, y, ['numerical'] * 22, "Diagnosis")
 
 # X, y = load_from_csv("../data/rice.csv", "label")
-
 # test_depths(X, y, ['numerical'] * 7, "label")
 
-feature_types = ['categorical','numerical','numerical','categorical','categorical','categorical','categorical','numerical','categorical','categorical','categorical','categorical','categorical','numerical','numerical']
-X, y = load_from_csv("../data/credit_approval.csv", "label")
-test_depths(X, y, feature_types, "label")
+# feature_types = ['categorical','numerical','numerical','categorical','categorical','categorical','categorical','numerical','categorical','categorical','categorical','categorical','categorical','numerical','numerical']
+# X, y = load_from_csv("../data/credit_approval.csv", "label")
+# test_depths(X, y, feature_types, "label")
