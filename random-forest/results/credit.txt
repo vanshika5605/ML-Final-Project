@@ -1,0 +1,87 @@
+For max_depth 1
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8331, Prec=0.8511, Rec=0.8243, F1=0.8268
+ntree=40: Acc=0.8240, Prec=0.8520, Rec=0.8114, F1=0.8138
+ntree=50: Acc=0.8178, Prec=0.8381, Rec=0.8065, F1=0.8095
+
+For max_depth 3
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8606, Prec=0.8623, Rec=0.8589, F1=0.8587
+ntree=40: Acc=0.8591, Prec=0.8675, Rec=0.8549, F1=0.8560
+ntree=50: Acc=0.8529, Prec=0.8633, Rec=0.8490, F1=0.8496
+
+For max_depth 5
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8654, Prec=0.8728, Rec=0.8602, F1=0.8623
+ntree=40: Acc=0.8482, Prec=0.8538, Rec=0.8432, F1=0.8450
+ntree=50: Acc=0.8744, Prec=0.8801, Rec=0.8713, F1=0.8721
+
+For max_depth 7
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8607, Prec=0.8676, Rec=0.8561, F1=0.8572
+ntree=40: Acc=0.8589, Prec=0.8648, Rec=0.8557, F1=0.8565
+ntree=50: Acc=0.8621, Prec=0.8683, Rec=0.8578, F1=0.8594
+
+For max_depth 9
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8423, Prec=0.8465, Rec=0.8379, F1=0.8394
+ntree=40: Acc=0.8575, Prec=0.8616, Rec=0.8545, F1=0.8550
+ntree=50: Acc=0.8545, Prec=0.8593, Rec=0.8506, F1=0.8519
+
+For max_depth 11
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8545, Prec=0.8590, Rec=0.8508, F1=0.8520
+ntree=40: Acc=0.8469, Prec=0.8526, Rec=0.8415, F1=0.8435
+ntree=50: Acc=0.8652, Prec=0.8701, Rec=0.8612, F1=0.8627
+
+For max_depth 13
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8575, Prec=0.8605, Rec=0.8539, F1=0.8552
+ntree=40: Acc=0.8560, Prec=0.8608, Rec=0.8533, F1=0.8537
+ntree=50: Acc=0.8545, Prec=0.8591, Rec=0.8502, F1=0.8518
+
+For max_depth 15
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8574, Prec=0.8620, Rec=0.8532, F1=0.8550
+ntree=40: Acc=0.8575, Prec=0.8618, Rec=0.8529, F1=0.8547
+ntree=50: Acc=0.8653, Prec=0.8698, Rec=0.8618, F1=0.8630
+
+For max_depth 17
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8468, Prec=0.8536, Rec=0.8434, F1=0.8439
+ntree=40: Acc=0.8652, Prec=0.8692, Rec=0.8626, F1=0.8630
+ntree=50: Acc=0.8483, Prec=0.8534, Rec=0.8452, F1=0.8459
+
+For max_depth 19
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8529, Prec=0.8569, Rec=0.8499, F1=0.8507
+ntree=40: Acc=0.8500, Prec=0.8548, Rec=0.8455, F1=0.8471
+ntree=50: Acc=0.8499, Prec=0.8532, Rec=0.8472, F1=0.8476
+
+For max_depth 21
+ntree value  30
+ntree value  40
+ntree value  50
+ntree=30: Acc=0.8529, Prec=0.8583, Rec=0.8499, F1=0.8504
+ntree=40: Acc=0.8515, Prec=0.8563, Rec=0.8481, F1=0.8488
+ntree=50: Acc=0.8575, Prec=0.8615, Rec=0.8533, F1=0.8548
