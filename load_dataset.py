@@ -5,7 +5,6 @@ import pandas as pd
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from ucimlrepo import fetch_ucirepo 
 
 def load_dataset():
     digits = datasets.load_digits(return_X_y=True)

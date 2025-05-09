@@ -115,22 +115,6 @@ def run_classifier(X, y, target_column, feature_types, max_depth):
 # X, y = load_from_csv("../data/credit_approval.csv", "label")
 # run_classifier(X, y, "label", feature_types, 15)
 
-
-# To test the classifier for different maximal_depths
-
-# X, y = load_dataset()
-# test_depths(X, y, ['numerical'] * 64, "label")
-
-# X, y = load_from_csv("../data/parkinsons.csv", "Diagnosis")
-# test_depths(X, y, ['numerical'] * 22, "Diagnosis")
-
-# X, y = load_from_csv("../data/rice.csv", "label")
-# test_depths(X, y, ['numerical'] * 7, "label")
-
-# feature_types = ['categorical','numerical','numerical','categorical','categorical','categorical','categorical','numerical','categorical','categorical','categorical','categorical','categorical','numerical','numerical']
-# X, y = load_from_csv("../data/credit_approval.csv", "label")
-# test_depths(X, y, feature_types, "label")
-
 feature_types = [
     'numerical',    # Age
     'categorical',  # Gender
@@ -147,5 +131,39 @@ feature_types = [
     'numerical',    # GPA
 ]
 X, y = load_student_data_from_csv()
+run_classifier(X, y, "GradeClass", feature_types, 7)
 
-test_depths(X, y, feature_types, "GradeClass")
+
+# To test the classifier for different maximal_depths
+
+# X, y = load_dataset()
+# test_depths(X, y, ['numerical'] * 64, "label")
+
+# X, y = load_from_csv("../data/parkinsons.csv", "Diagnosis")
+# test_depths(X, y, ['numerical'] * 22, "Diagnosis")
+
+# X, y = load_from_csv("../data/rice.csv", "label")
+# test_depths(X, y, ['numerical'] * 7, "label")
+
+# feature_types = ['categorical','numerical','numerical','categorical','categorical','categorical','categorical','numerical','categorical','categorical','categorical','categorical','categorical','numerical','numerical']
+# X, y = load_from_csv("../data/credit_approval.csv", "label")
+# test_depths(X, y, feature_types, "label")
+
+# feature_types = [
+#     'numerical',    # Age
+#     'categorical',  # Gender
+#     'categorical',  # Ethnicity
+#     'categorical',  # ParentalEducation
+#     'numerical',    # StudyTimeWeekly
+#     'numerical',    # Absences
+#     'categorical',  # Tutoring
+#     'categorical',  # ParentalSupport
+#     'categorical',  # Extracurricular
+#     'categorical',  # Sports
+#     'categorical',  # Music
+#     'categorical',  # Volunteering
+#     'numerical',    # GPA
+# ]
+# X, y = load_student_data_from_csv()
+
+# test_depths(X, y, feature_types, "GradeClass")
