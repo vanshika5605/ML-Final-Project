@@ -10,7 +10,7 @@ from random_forest_classifier import stratified_k_fold, train_random_forest_on_f
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from load_dataset import load_dataset, load_from_csv
+from load_dataset import load_dataset, load_from_csv, load_student_data_from_csv 
 
 # Function to test different maximal_depths for a dataset
 def test_depths(X, y, feature_types, target_column):    
@@ -108,8 +108,8 @@ def run_classifier(X, y, target_column, feature_types, max_depth):
 # X, y = load_from_csv("../data/parkinsons.csv", "Diagnosis")
 # run_classifier(X, y, "Diagnosis", ['numerical'] * 22, 13)
 
-X, y = load_from_csv("../data/rice.csv", "label")
-run_classifier(X, y, "label", ['numerical'] * 7, 7)
+# X, y = load_from_csv("../data/rice.csv", "label")
+# run_classifier(X, y, "label", ['numerical'] * 7, 7)
 
 # feature_types = ['categorical','numerical','numerical','categorical','categorical','categorical','categorical','numerical','categorical','categorical','categorical','categorical','categorical','numerical','numerical']
 # X, y = load_from_csv("../data/credit_approval.csv", "label")
@@ -130,3 +130,22 @@ run_classifier(X, y, "label", ['numerical'] * 7, 7)
 # feature_types = ['categorical','numerical','numerical','categorical','categorical','categorical','categorical','numerical','categorical','categorical','categorical','categorical','categorical','numerical','numerical']
 # X, y = load_from_csv("../data/credit_approval.csv", "label")
 # test_depths(X, y, feature_types, "label")
+
+feature_types = [
+    'numerical',    # Age
+    'categorical',  # Gender
+    'categorical',  # Ethnicity
+    'categorical',  # ParentalEducation
+    'numerical',    # StudyTimeWeekly
+    'numerical',    # Absences
+    'categorical',  # Tutoring
+    'categorical',  # ParentalSupport
+    'categorical',  # Extracurricular
+    'categorical',  # Sports
+    'categorical',  # Music
+    'categorical',  # Volunteering
+    'numerical',    # GPA
+]
+X, y = load_student_data_from_csv()
+
+test_depths(X, y, feature_types, "GradeClass")
