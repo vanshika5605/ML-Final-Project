@@ -1,0 +1,55 @@
+rice-
+Architecture: [7, 32, 2], Lambda: 0.00 -> Acc: 0.9273, F1: 0.9258
+Architecture: [7, 32, 2], Lambda: 0.01 -> Acc: 0.9281, F1: 0.9265
+Architecture: [7, 32, 2], Lambda: 0.10 -> Acc: 0.9281, F1: 0.9265
+Architecture: [7, 32, 2], Lambda: 0.25 -> Acc: 0.9281, F1: 0.9265
+Architecture: [7, 32, 16, 2], Lambda: 0.00 -> Acc: 0.9281, F1: 0.9265
+Architecture: [7, 32, 16, 2], Lambda: 0.01 -> Acc: 0.9283, F1: 0.9268
+Architecture: [7, 32, 16, 2], Lambda: 0.10 -> Acc: 0.9283, F1: 0.9268
+Architecture: [7, 32, 16, 2], Lambda: 0.25 -> Acc: 0.9283, F1: 0.9268
+Architecture: [7, 100, 50, 2], Lambda: 0.00 -> Acc: 0.9281, F1: 0.9265
+Architecture: [7, 100, 50, 2], Lambda: 0.01 -> Acc: 0.9281, F1: 0.9265
+Architecture: [7, 100, 50, 2], Lambda: 0.10 -> Acc: 0.9281, F1: 0.9265
+Architecture: [7, 100, 50, 2], Lambda: 0.25 -> Acc: 0.9281, F1: 0.9265
+
+parkinsons-
+Architecture: [22, 32, 2], Lambda: 0.00 -> Acc: 0.8979, F1: 0.8524
+Architecture: [22, 32, 2], Lambda: 0.01 -> Acc: 0.8979, F1: 0.8524
+Architecture: [22, 32, 2], Lambda: 0.10 -> Acc: 0.8926, F1: 0.8436
+Architecture: [22, 32, 2], Lambda: 0.25 -> Acc: 0.8821, F1: 0.8255
+Architecture: [22, 32, 16, 2], Lambda: 0.00 -> Acc: 0.9134, F1: 0.8801
+Architecture: [22, 32, 16, 2], Lambda: 0.01 -> Acc: 0.9339, F1: 0.9114
+Architecture: [22, 32, 16, 2], Lambda: 0.10 -> Acc: 0.9134, F1: 0.8846
+Architecture: [22, 32, 16, 2], Lambda: 0.25 -> Acc: 0.8926, F1: 0.8436
+Architecture: [22, 100, 50, 2], Lambda: 0.00 -> Acc: 0.8976, F1: 0.8530
+Architecture: [22, 100, 50, 2], Lambda: 0.01 -> Acc: 0.8976, F1: 0.8537
+Architecture: [22, 100, 50, 2], Lambda: 0.10 -> Acc: 0.8824, F1: 0.8404
+Architecture: [22, 100, 50, 2], Lambda: 0.25 -> Acc: 0.8766, F1: 0.8252
+
+credit- 
+Architecture: [46, 32, 2], Lambda: 0.00 -> Acc: 0.8545, F1: 0.8535
+Architecture: [46, 32, 2], Lambda: 0.01 -> Acc: 0.8590, F1: 0.8581
+Architecture: [46, 32, 2], Lambda: 0.10 -> Acc: 0.8590, F1: 0.8580
+Architecture: [46, 32, 2], Lambda: 0.25 -> Acc: 0.8591, F1: 0.8581
+Architecture: [46, 32, 16, 2], Lambda: 0.00 -> Acc: 0.8575, F1: 0.8563
+Architecture: [46, 32, 16, 2], Lambda: 0.01 -> Acc: 0.8560, F1: 0.8548
+Architecture: [46, 32, 16, 2], Lambda: 0.10 -> Acc: 0.8590, F1: 0.8580
+Architecture: [46, 32, 16, 2], Lambda: 0.25 -> Acc: 0.8529, F1: 0.8518
+Architecture: [46, 100, 50, 2], Lambda: 0.00 -> Acc: 0.8484, F1: 0.8467
+Architecture: [46, 100, 50, 2], Lambda: 0.01 -> Acc: 0.8575, F1: 0.8559
+Architecture: [46, 100, 50, 2], Lambda: 0.10 -> Acc: 0.8560, F1: 0.8546
+Architecture: [46, 100, 50, 2], Lambda: 0.25 -> Acc: 0.8530, F1: 0.8517
+
+digit - 
+Architecture: [64, 32, 10], Lambda: 0.00 -> Acc: 0.9644, F1: 0.9644
+Architecture: [64, 32, 10], Lambda: 0.01 -> Acc: 0.9655, F1: 0.9655
+Architecture: [64, 32, 10], Lambda: 0.10 -> Acc: 0.9638, F1: 0.9638
+Architecture: [64, 32, 10], Lambda: 0.25 -> Acc: 0.9649, F1: 0.9650
+Architecture: [64, 32, 16, 10], Lambda: 0.00 -> Acc: 0.9048, F1: 0.9024
+Architecture: [64, 32, 16, 10], Lambda: 0.01 -> Acc: 0.8876, F1: 0.8845
+Architecture: [64, 32, 16, 10], Lambda: 0.10 -> Acc: 0.9082, F1: 0.9069
+Architecture: [64, 32, 16, 10], Lambda: 0.25 -> Acc: 0.9109, F1: 0.9095
+Architecture: [64, 100, 50, 10], Lambda: 0.00 -> Acc: 0.9594, F1: 0.9594
+Architecture: [64, 100, 50, 10], Lambda: 0.01 -> Acc: 0.9599, F1: 0.9600
+Architecture: [64, 100, 50, 10], Lambda: 0.10 -> Acc: 0.9583, F1: 0.9584
+Architecture: [64, 100, 50, 10], Lambda: 0.25 -> Acc: 0.9583, F1: 0.9584
