@@ -237,14 +237,14 @@ def run(X, y, categorical_cols, numeric_cols, target_column, num_folds=10):
 # numeric_cols = ["attr2_num", "attr3_num", "attr8_num", "attr14_num", "attr15_num"]
 # run(X, y, categorical_cols, numeric_cols, target_column="label")
 
-X_array, y = load_student_data_from_csv()
-df = pd.read_csv("../data/student_performance_dataset.csv")
-feature_cols = df.drop(columns=["GradeClass", "StudentID"]).columns.tolist()
-X = pd.DataFrame(X_array, columns=feature_cols)
-categorical_cols = [
-    'Gender', 'Ethnicity', 'ParentalEducation', 'Tutoring',
-    'ParentalSupport', 'Extracurricular', 'Sports', 'Music', 'Volunteering'
-]
+# X_array, y = load_student_data_from_csv()
+# df = pd.read_csv("../data/student_performance_dataset.csv")
+# feature_cols = df.drop(columns=["GradeClass", "StudentID"]).columns.tolist()
+# X = pd.DataFrame(X_array, columns=feature_cols)
+# categorical_cols = [
+#     'Gender', 'Ethnicity', 'ParentalEducation', 'Tutoring',
+#     'ParentalSupport', 'Extracurricular', 'Sports', 'Music', 'Volunteering'
+# ]
 
-numeric_cols = ['Age', 'StudyTimeWeekly', 'Absences', 'GPA']
-run(X, y, categorical_cols, numeric_cols, target_column="GradeClass")
+# numeric_cols = ['Age', 'StudyTimeWeekly', 'Absences', 'GPA']
+# run(X, y, categorical_cols, numeric_cols, target_column="GradeClass")

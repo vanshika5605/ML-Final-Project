@@ -115,23 +115,23 @@ def run_classifier(X, y, target_column, feature_types, max_depth):
 # X, y = load_from_csv("../data/credit_approval.csv", "label")
 # run_classifier(X, y, "label", feature_types, 15)
 
-feature_types = [
-    'numerical',    # Age
-    'categorical',  # Gender
-    'categorical',  # Ethnicity
-    'categorical',  # ParentalEducation
-    'numerical',    # StudyTimeWeekly
-    'numerical',    # Absences
-    'categorical',  # Tutoring
-    'categorical',  # ParentalSupport
-    'categorical',  # Extracurricular
-    'categorical',  # Sports
-    'categorical',  # Music
-    'categorical',  # Volunteering
-    'numerical',    # GPA
-]
-X, y = load_student_data_from_csv()
-run_classifier(X, y, "GradeClass", feature_types, 7)
+# feature_types = [
+#     'numerical',    # Age
+#     'categorical',  # Gender
+#     'categorical',  # Ethnicity
+#     'categorical',  # ParentalEducation
+#     'numerical',    # StudyTimeWeekly
+#     'numerical',    # Absences
+#     'categorical',  # Tutoring
+#     'categorical',  # ParentalSupport
+#     'categorical',  # Extracurricular
+#     'categorical',  # Sports
+#     'categorical',  # Music
+#     'categorical',  # Volunteering
+#     'numerical',    # GPA
+# ]
+# X, y = load_student_data_from_csv()
+# run_classifier(X, y, "GradeClass", feature_types, 7)
 
 
 # To test the classifier for different maximal_depths
