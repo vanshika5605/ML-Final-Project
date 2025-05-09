@@ -167,7 +167,7 @@ def createGraph(k_values, accuracies, title, ylabel, label):
 # Part 1 - With Normalization
 
 def run(X, y, categorical_cols, numeric_cols, target_column, num_folds=10):
-    k_values = range(1, 52, 2)
+    k_values = [1, 5, 10, 15, 20, 25, 30, 35]
 
     print("Creating folds")
     folds = stratified_k_fold(X, y, target_column, num_folds)
@@ -177,7 +177,7 @@ def run(X, y, categorical_cols, numeric_cols, target_column, num_folds=10):
     f1_scores = []
 
     for k in k_values:
-        print("Running for k = ", k)
+        print(f"\nRunning for k = {k}")
         acc_list, f1_list = [], []
 
         for i in range(num_folds):
@@ -196,18 +196,17 @@ def run(X, y, categorical_cols, numeric_cols, target_column, num_folds=10):
             acc_list.append(metrics['Accuracy'] * 100)
             f1_list.append(metrics['F1'] * 100)
 
-        accuracy_scores.append(np.mean(acc_list))
-        f1_scores.append(np.mean(f1_list))
+        avg_acc = np.mean(acc_list)
+        avg_f1 = np.mean(f1_list)
+
+        accuracy_scores.append(avg_acc)
+        f1_scores.append(avg_f1)
+
+        print(f"Average Accuracy at k={k}: {avg_acc:.2f}%")
+        print(f"Average F1 Score at k={k}: {avg_f1:.2f}%")
 
     createGraph(k_values, accuracy_scores, 'Accuracy vs. k', 'Average Accuracy (%)', 'Accuracy')
     createGraph(k_values, f1_scores, 'F1 Score vs. k', 'Average F1 Score (%)', 'F1 Score')
-
-# df = pd.read_csv("datasets/loan.csv")
-# target_column = "label"
-# categorical_cols = ["attr1_cat", "attr2_cat", "attr3_cat", "attr4_cat", "attr5_cat", "attr10_cat", "attr11_cat"]
-# numeric_cols = ["attr6_num", "attr7_num", "attr8_num", "attr9_num"]
-
-# run(df.drop(columns=[target_column]), df[target_column], categorical_cols, numeric_cols, target_column)
 
 # X, y = load_dataset()
 # y = y.reshape(-1, 1)  # Ensure y is 2D
