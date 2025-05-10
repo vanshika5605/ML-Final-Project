@@ -77,6 +77,20 @@ python KNN.py
 
 ### Neural Network
 
+Open `main.py` and uncomment the relevant block:
+
+- **Dataset 1:** Lines 72-77  
+- **Dataset 2:** Lines 79-82 
+- **Dataset 3:** Lines 84-87  
+- **Dataset 4:** Lines 89-92 
+- **Dataset 5:** Lines 94-97 
+
+Then run:
+```
+python main.py
+```
+
+
 ---
 
 ## Datasets Evaluated

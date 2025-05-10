@@ -68,33 +68,30 @@ def transform_data(X_raw, y_raw, target_column, csv_path: str):
 
 
 if __name__ == "__main__":
+    
     # X_digit, y_digit = load_dataset()
     # Normalize input
     # X_digit = X_digit / 16.0
-    #best_arch, best_lam = run_NN(X_digit, y_digit)
-    # best_arch = [64, 32, 10]
-    # best_lam = 0.01
+    # best_arch, best_lam = run_NN(X_digit, y_digit)
+
     # epoch_based_learning_curve(X_digit, y_digit, best_arch, best_lam, alpha = 0.1)
-    
-    # X_credit, y_credit = load_from_csv("../data/credit_approval.csv", target_column="label")
-    # X_trans, y_trans = transform_data(X_credit, y_credit, "label", csv_path="../data/credit_approval.csv")
-    # best_arch, best_lam = run_NN(X_trans, y_trans)
-    # epoch_based_learning_curve(X_trans, y_trans, best_arch, best_lam, alpha = 0.1)
-    
+
     # X_parkinsons, y_parkinsons = load_from_csv("../data/parkinsons.csv", target_column="Diagnosis")
     # X_trans, y_trans = transform_data(X_parkinsons, y_parkinsons, "Diagnosis", csv_path="../data/parkinsons.csv")
     # best_arch, best_lam = run_NN(X_trans, y_trans)
     # epoch_based_learning_curve(X_trans, y_trans, best_arch, best_lam, alpha = 0.1)
-    
+
     # X_rice, y_rice = load_from_csv("../data/rice.csv", target_column="label")
     # X_trans, y_trans = transform_data(X_rice, y_rice, "label", csv_path="../data/rice.csv")
     # best_arch, best_lam = run_NN(X_trans, y_trans)
-    # epoch_based_learning_curve(X_trans, y_trans, best_arch, best_lam)
+    # epoch_based_learning_curve(X_trans, y_trans, best_arch, best_lam)    
 
-    X_student, y_student = load_from_csv("../data/student_performance_dataset.csv", target_column="GradeClass")
-    X_trans, y_trans = transform_data(X_student, y_student, "GradeClass", csv_path="../data/student_performance_dataset.csv")
+    # X_credit, y_credit = load_from_csv("../data/credit_approval.csv", target_column="label")
+    # X_trans, y_trans = transform_data(X_credit, y_credit, "label", csv_path="../data/credit_approval.csv")
     # best_arch, best_lam = run_NN(X_trans, y_trans)
-    best_arch = [31, 32, 16, 5]
-    best_lam = 0.01
-    epoch_based_learning_curve(X_trans, y_trans, best_arch, best_lam, alpha = 0.1)
+    # epoch_based_learning_curve(X_trans, y_trans, best_arch, best_lam, alpha = 0.1)
 
+    # X_student, y_student = load_from_csv("../data/student_performance_dataset.csv", target_column="GradeClass")
+    # X_trans, y_trans = transform_data(X_student, y_student, "GradeClass", csv_path="../data/student_performance_dataset.csv")
+    # best_arch, best_lam = run_NN(X_trans, y_trans)
+    # epoch_based_learning_curve(X_trans, y_trans, best_arch, best_lam, alpha = 0.1)
